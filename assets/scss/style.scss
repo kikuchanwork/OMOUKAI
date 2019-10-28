@@ -11,12 +11,7 @@ html {
   font-weight: 500;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-  a {
+ a {
   text-decoration: none;
   transition: color 0.3s;
   }
@@ -36,24 +31,42 @@ body {
     border-bottom: 1px solid rgba(#d2143c,.7s);
   }
 
-section.scroll_down2 {
+.scroll_down2 {
   position: absolute;
-  bottom: 0px;
-  left: 0;
-  right: 0;
+  bottom: 70px;
   width: 100%;
   height: 70px;
   margin: 0 auto;
   text-align: center;
-  z-index: 100;
+  z-index: 1;
 span {
   position: absolute;
+  display: block;
   top: 0;
-  width: 100px;
-  height: 40px;
-  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  height: 70px;
   font-family: 'Song Myung', serif;
   color: #000000;
+}
+}
+.scroll_down3 {
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+span {
+  position: absolute;
+  display: block;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 70px;
+  font-family: 'Song Myung', serif;
+  color: #ffffff;
 }
 }
 
@@ -266,7 +279,7 @@ a span::before {
 section.greeting {
   position: relative;
   width: 100%;
-  height: 1050px;
+  height: 1150px;
   text-align: center;
     background: url(../images/kaicho_sakura01.jpg) left 20px no-repeat,
                 url(../images/kaicho_sakura02.jpg) right top no-repeat;
@@ -345,4 +358,124 @@ section.greeting {
           }
         }
   }
+}
+
+section.katudo {
+  position: relative;
+  width: 100%;
+  height: 1300px;
+  text-align: center;
+    background: url(../images/koudo.jpg) center bottom no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    color: rgba(#fff,.9);
+    h2 {
+    color: rgba(#fff,.9);
+    margin-bottom: 10px;
+    }
+  article.katudo_keikaku {
+    width: 80%;
+    height: 350px;
+    margin: 40px auto;
+    background-color: rgba(#142e63,.73);
+       img {
+        position: absolute;
+        display:block;
+        top: 150px;
+        right: 15%;
+        width: 250px;
+        opacity: .15;
+       }
+       p {
+         width: 350px;
+         margin: 0 auto;
+         font-size: 1rem;
+         letter-spacing: .1rem;
+         line-height: 1.75rem;
+         padding: 20px;
+        span {
+          display: block;
+         text-align: center;
+          width: 200px;
+          font-size: 1.2rem;
+          margin: 0 auto;
+          padding: 15px;
+          border: .25px solid rgba(#ffffff,.8);
+        }
+      }
+        li{
+          width: 210px;
+          margin: 0 auto;
+            list-style: none;
+            text-align: left;
+         letter-spacing: .1rem;
+         line-height: 1.75rem;
+        font-size: 1rem;
+        }
+        li:before {
+        content:"\f046";
+        position: relative;
+        font-family: FontAwesome;
+        margin-right: .5em;
+        }
+  }
+  article.katudo_houkoku {
+    width: 80%;
+    height: 500px;
+    margin: 40px auto;
+    background-color: rgba(#142e63,.73);
+    h2 {
+    color: rgba(#fff,.9);
+    margin-bottom: 40px;
+    }
+       p {
+         display: flex;
+         width: 90%;
+         margin: 0 auto;
+         font-size: 1rem;
+         letter-spacing: .1rem;
+         line-height: 1.75rem;
+          vertical-align:middle;
+          overflow: hidden;
+        span {
+          display: block;
+          text-align: center;
+          width: 33%;
+          height: 150px;
+          font-size: 1.2rem;
+          margin-right: 10px;
+          padding-top: 20px;
+          vertical-align:middle;
+          border: .25px solid rgba(#ffffff,.5);
+          background-color: rgba(#fff,.2);
+          font-weight: 800;
+        }
+            @media screen and (max-width: 375px) {
+                 span {
+                  font-size: .8rem;
+                  padding-top: 30px;
+                 }
+            }
+        span:last-of-type {
+          margin-right: 0px;
+        }
+        span: nth-of-type(4,5,6);
+          margin-top: 10px;
+        }
+        span.shousai {
+          width: 65%;
+          height: 40px;
+          background-color: rgba(#d2143c,.7);
+          padding: 5px 20px;
+          margin: 5px 0 0 18%;
+          font-weight: none;
+          font-size: 1rem;
+          letter-spacing: 0;
+          overflow: hidden;
+
+        }
+        i {
+          margin: 2px 0 12px 0;
+        }
+      }
 }
