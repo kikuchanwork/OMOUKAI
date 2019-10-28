@@ -1,8 +1,14 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Song+Myung&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Song+Myung:200&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:200&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/hannari.css');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:200&display=swap');
+
 html {
   font-size: 16px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 500;
 }
 
 body {
@@ -20,11 +26,40 @@ body {
   a:active{
     color : #26a69a;
   }
+  h2 {
+    width: 200px;
+    height: 85px;
+    margin: 50px auto 40px auto;
+    line-height: 6rem;
+    font-family: 'Noto Serif JP', serif;
+    color: rgba(#000000,.8);
+    border-bottom: 1px solid rgba(#d2143c,.7s);
+  }
 
+section.scroll_down2 {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 100;
+span {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 40px;
+  box-sizing: border-box;
+  font-family: 'Song Myung', serif;
+  color: #000000;
+}
+}
 
 header {
   width: 100%;
-  height: 700px;
+  height: 850px;
   margin: 0 auto;
   padding: 0;
   background: url('../images/top_img.jpg') center top no-repeat;
@@ -149,7 +184,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 }
 section.scroll_down {
   position: absolute;
-  top: 640px;
+  top: 750px;
   left: 0;
   right: 0;
   width: 70px;
@@ -225,4 +260,89 @@ a span::before {
     opacity: 0;
   }
 }
+}
+
+// mainここから
+section.greeting {
+  position: relative;
+  width: 100%;
+  height: 1050px;
+  text-align: center;
+    background: url(../images/kaicho_sakura01.jpg) left 20px no-repeat,
+                url(../images/kaicho_sakura02.jpg) right top no-repeat;
+    background-size: 35%;
+  article {
+    display: flex;
+    width: 80%;
+    min-width: 750px;
+    height: 750px;
+    margin: 0 auto;
+  }
+
+  div.greeting_left {
+    position: relative;
+    width: 45%;
+    min-width:375px;
+    height: 750px;
+    background: url(../images/kaicho.png) center top no-repeat;
+    background-size: contain;
+    background-color: rgba(#ebebeb,.7);
+        p {
+         position: absolute;
+         max-width: 800px;
+         bottom: 0;
+         left: 0;
+         background-color: #fff;
+         text-align: justify;
+         padding: 20px 25px 20px 20px ;
+         font-size: .8rem;
+         letter-spacing: .1rem;
+         line-height: 1.75rem;
+         border: .25px solid rgba(#000,.5);
+        }
+        span {
+          display: block;
+          margin: 0px 0 8px 0;
+          font-size: 1rem;
+          font-weight: 800;
+        }
+  }
+  div.greeting_right {
+    width: 55%;
+    min-width:375px;
+    height: 750px;
+    background: url(../images/kaicho_sakura03.jpg) 0px bottom no-repeat;
+    background-size: 65%;
+         p {
+         text-align: justify;
+         padding: 0px 25px 20px 40px;
+         font-size: .8rem;
+         letter-spacing: .1rem;
+         line-height: 1.75rem;
+         text-indent: 1rem;
+         background-color: rgba(#fff,.5);
+        }
+        span {
+          display: block;
+          margin: 0px 0 40px 40px;
+          font-size: 1.2rem;
+          font-weight: 800;
+          text-align: left;
+         letter-spacing: .1rem;
+        }
+        span.sign {
+          display: block;
+          width: 88%;
+          height: 250px;
+          padding-left: -100px;
+          text-align: right;
+          font-weight: none;
+          font-size: 1rem;
+          letter-spacing: .1rem;
+          line-height: 2rem;
+          img {
+            width: 200px;
+          }
+        }
+  }
 }
