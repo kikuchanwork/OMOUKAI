@@ -296,7 +296,7 @@ section.greeting {
     position: relative;
     width: 45%;
     min-width:375px;
-    height: 750px;
+    height: 800px;
     background: url(../images/kaicho.png) center top no-repeat;
     background-size: contain;
     background-color: rgba(#ebebeb,.7);
@@ -307,7 +307,7 @@ section.greeting {
          left: 0;
          background-color: #fff;
          text-align: justify;
-         padding: 20px 25px 20px 20px ;
+         padding: 40px 38px 40px 35px ;
          font-size: .8rem;
          letter-spacing: .1rem;
          line-height: 1.75rem;
@@ -424,14 +424,14 @@ section.katudo {
     height: 500px;
     margin: 40px auto;
     background-color: rgba(#142e63,.73);
-    h2 {
-    color: rgba(#fff,.9);
-    margin-bottom: 40px;
-    }
+      h2 {
+      color: rgba(#fff,.9);
+      margin-bottom: 40px;
+      }
        p {
          display: flex;
          width: 90%;
-         margin: 0 auto;
+         margin: 10px auto 0 auto;
          font-size: 1rem;
          letter-spacing: .1rem;
          line-height: 1.75rem;
@@ -449,7 +449,7 @@ section.katudo {
           border: .25px solid rgba(#ffffff,.5);
           background-color: rgba(#fff,.2);
           font-weight: 800;
-        }
+          }
             @media screen and (max-width: 375px) {
                  span {
                   font-size: .8rem;
@@ -458,9 +458,6 @@ section.katudo {
             }
         span:last-of-type {
           margin-right: 0px;
-        }
-        span: nth-of-type(4,5,6);
-          margin-top: 10px;
         }
         span.shousai {
           width: 65%;
@@ -472,10 +469,77 @@ section.katudo {
           font-size: 1rem;
           letter-spacing: 0;
           overflow: hidden;
-
         }
         i {
           margin: 2px 0 12px 0;
         }
-      }
+    }
+}
+}
+
+section.syusi {
+  position: relative;
+  width: 100%;
+  min-width: 800px;
+  height: 1300px;
+    h2 {
+    width: 270px;
+    color: rgba(#000,.9);
+    margin-top: 0px;
+    margin-bottom: 10px;
+    }
+    article.syusi_left {
+      position: absolute;
+      width: 30%;
+      height: 1300px;
+      top: 0;
+      left: 0;
+      background: url(../images/clocktower.jpg) left top no-repeat;
+    background-size: cover;
+    }
+    article.syusi_right {
+         position: absolute;
+         width: 55%;
+         height: 1200px;
+         left:37%;
+        color: rgba(#000,.9);
+        background: url(../images/uni_logo_red_trans.png) center bottom no-repeat;
+        background-size: 70%;
+        p {
+         text-align: justify;
+         padding: 20px 25px 30px 40px;
+         font-size: .8rem;
+         letter-spacing: .1rem;
+         line-height: 1.75rem;
+         text-indent: 1rem;
+         background-color: rgba(#ffffff,.6);
+        }
+        p:nth-of-type(2) {
+         padding: 20px 25px 0px 40px;
+        }
+        p:nth-of-type(3) {
+         padding: 0px 25px 0px 40px;
+        }
+        p:nth-of-type(4) {
+         padding: 0px 25px 0px 40px;
+        }
+        p:nth-of-type(5) {
+         padding: 0px 25px 0px 40px;
+        }
+        p:nth-of-type(6) {
+         padding: 0px 25px 30px 40px;
+        }
+        span {
+          display: block;
+          margin: 0px 0 40px 40px;
+          font-size: 1.2rem;
+          font-weight: 800;
+          text-align: left;
+         letter-spacing: .1rem;
+        }
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+    }
 }
