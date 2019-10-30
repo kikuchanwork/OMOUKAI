@@ -9,6 +9,8 @@ html {
     font-size: 16px;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
     font-weight: 500;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 a {
@@ -23,6 +25,55 @@ a:hover {
 a:active {
     color: #26a69a;
 }
+
+//topに戻るボタンここから
+#page_top{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+  background-color: #fff;
+  z-index: 100;
+}
+#page_top>a{
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 90px;
+  text-decoration: none;
+}
+#page_top>a::before{
+  font-family: 'FontAwesome';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 30px;
+  color: #3f98ef;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+#page_top>a::after{
+  content: 'PAGE TOP';
+  font-size: 13px;
+  color: #fff;
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  color: #3f98ef;
+}
+//topに戻るボタンここまで
 
 h2 {
     width: 200px;
@@ -335,6 +386,8 @@ section.scroll_down {
 
 main {
     position: absolute;
+    width: 100vw;
+    height: 8750px;
 }
 
 section.greeting {
@@ -568,9 +621,8 @@ section.syusi {
     top: 0;
     left: 0;
     background:
-        url(../images/uni_logo_red_trans.png) right top repeat-y,
         url(../images/clocktower.jpg) left top no-repeat;
-    background-size: 15%, contain;
+    background-size: contain;
 
     h2 {
         width: 270px;
@@ -588,8 +640,6 @@ section.syusi {
         right: 0;
         margin: 0 auto;
         color: rgba(#000, .9);
-        ;
-
         div.paragraph {
             padding: 60px 25px 30px 40px;
             height: 100%;
@@ -598,8 +648,7 @@ section.syusi {
             letter-spacing: .1rem;
             line-height: 1.75rem;
             text-indent: 1rem;
-            background-color: #fff;
-
+            background-color: rgba(#fff, 1);
             p {
                 padding: 7px 0;
             }
@@ -613,12 +662,22 @@ section.syusi {
                 letter-spacing: .1rem;
             }
 
-            img {
+            img:first-of-type {
                 width: 100%;
                 object-fit: contain;
                 margin: 15px 0;
             }
         }
+            img.uni_logo_red {
+              position: absolute;
+              bottom: 160px;
+              left: 0;
+              right: 0;
+              width: 30%;
+              margin: 0 auto;
+              object-fit: contain;
+              z-index: 1;
+            }
     }
 
     i {
@@ -627,15 +686,536 @@ section.syusi {
 }
 
 section.nyukai {
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 1024px;
-    background: url(../images/contact_bg.jpg) center top no-repeat;
+    height: 1000px;
+    background-color: red;
+    background: url(../images/contact_bg.jpg) center 200px no-repeat;
     background-size: cover;
-        h2 {
-            width: 170px;
-            color: rgba(#000, .9);
-            margin-top: 0px;
-            margin-bottom: 10px;
-        }
+
+    h2 {
+        width: 170px;
+        color: rgba(#000, .9);
+        margin-top: 60px;
+        margin-bottom: 10px;
+    }
 }
 
+section.kaisoku {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1524px;
+    background:
+        url(../images/kaisoku_sakura01.jpg) left 80px no-repeat,
+        url(../images/kaisoku_sakura02.jpg) right 100px no-repeat,
+        url(../images/kaisoku_sakura03.png) left bottom no-repeat;
+    background-size: 20%, 20%, 700px;
+    text-align: center;
+
+    h2 {
+        width: 150px;
+        height: 150px;
+        color: rgba(#000, .9);
+        background: url(../images/kaisoku.png) 0 0 no-repeat;
+        background-size: cover;
+        margin-top: 100px;
+        margin-bottom: 10px;
+        border-bottom: 0;
+        line-height: 9rem;
+        text-align: center;
+    }
+
+    div.article_kakomi {
+        display: flex;
+        width: 80%;
+        min-width: 635px;
+        text-align: left;
+        margin: 0 auto 200px auto;
+        letter-spacing: 0rem;
+        line-height: 1.75rem;
+        text-align: justify;
+    }
+
+    article.kaisoku_left {
+        width: 50%;
+        margin: 50px 20px 0 0;
+        padding: 50px;
+        background: -moz-linear-gradient(top, rgba(253, 218, 226, 0.59) 0%, rgba(255, 255, 255, 0.88) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(253, 218, 226, 0.59) 0%, rgba(255, 255, 255, 0.88) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(253, 218, 226, 0.59) 0%, rgba(255, 255, 255, 0.88) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#96fddae2', endColorstr='#b5ffffff', GradientType=0);
+
+        /* IE6-9 */
+        p {
+            padding: 7px 7px 0 0;
+        }
+
+        span {
+            display: block;
+            font-size: .9rem;
+            padding-left: 1.4rem;
+            padding-top: .2rem;
+            text-indent: 0;
+        }
+    }
+
+    article.kaisoku_right {
+        width: 50%;
+        margin: 50px 0 0 20px;
+        padding: 50px;
+        background: -moz-linear-gradient(top, rgba(253, 218, 226, 0.59) 0%, rgba(255, 255, 255, 0.88) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(253, 218, 226, 0.59) 0%, rgba(255, 255, 255, 0.88) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(253, 218, 226, 0.59) 0%, rgba(255, 255, 255, 0.88) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#96fddae2', endColorstr='#b5ffffff', GradientType=0);
+
+        /* IE6-9 */
+        p {
+            padding: 7px 7px 0 0;
+        }
+
+        span {
+            display: block;
+            font-size: .9rem;
+            padding-left: 1.4rem;
+            padding-top: .2rem;
+            text-indent: 0;
+        }
+    }
+}
+
+
+section.sosiki {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    h2 {
+        width: 155px;
+        height: 155px;
+        color: rgba(#fff, 1);
+        background: url(../images/sosiki_mark.png) 0 0 no-repeat;
+        background-size: contain;
+        margin-top: 100px;
+        margin-bottom: 10px;
+        border-bottom: 0;
+        line-height: 9.7rem;
+        text-align: center;
+    }
+
+    hr {
+        position: absolute;
+        width: 100%;
+        top: 75px;
+        left: 0;
+        right: 0;
+        border: 5px solid #d2143c;
+        z-index: -1;
+    }
+
+    article {
+        width: 80%;
+        text-align: center;
+        margin: 100px auto 250px auto;
+
+        div.soukai {
+            position: relative;
+            width: 750px;
+            height: 160px;
+            margin: 0 auto;
+            background: url(../images/people_soukai.png) center 50px no-repeat;
+            background-size: 95%;
+            border: .25px solid rgba(#000000, .1);
+            text-align: center;
+
+            p:first-of-type {
+                position: absolute;
+                display: block;
+                top: -25px;
+                left: 50px;
+                width: 120px;
+                height: 50px;
+                background-color: #3a3a3a;
+                font-size: 1.5rem;
+                line-height: 3.2rem;
+                color: rgba(#fff, .9);
+            }
+
+            p:last-of-type {
+                position: absolute;
+                display: block;
+                top: -20px;
+                left: 170px;
+                width: 120px;
+                height: 50px;
+                background-color: #fff;
+                font-size: 1.2rem;
+                line-height: 3rem;
+                color: #000;
+            }
+        }
+
+        div.div_yajirusi01 {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 750px;
+            height: 45px;
+
+            img.yajirusi01 {
+                position: absolute;
+                top: 0px;
+                left: 100px;
+                width: 10px;
+                z-index: 1;
+            }
+        }
+
+        div.nigyoume {
+            display: flex;
+            width: 750px;
+            height: 375px;
+            margin: 0 auto;
+
+            div.kanjikai {
+                position: relative;
+                top: 25px;
+                width: 410px;
+                height: 350px;
+                margin: 0 auto;
+                background: url(../images/people_kanji.png) center 160px no-repeat;
+                background-size: 90%;
+                border: .25px solid rgba(#000000, .1);
+                text-align: center;
+
+                p:first-of-type {
+                    position: absolute;
+                    display: block;
+                    top: -25px;
+                    left: 50px;
+                    width: 120px;
+                    height: 50px;
+                    background-color: #3a3a3a;
+                    font-size: 1.5rem;
+                    line-height: 3.2rem;
+                    color: rgba(#fff, .9);
+                }
+
+                p:nth-of-type(2) {
+                    position: absolute;
+                    display: block;
+                    top: -20px;
+                    left: 170px;
+                    width: 120px;
+                    height: 50px;
+                    background-color: #fff;
+                    font-size: 1.2rem;
+                    line-height: 3rem;
+                    color: #000;
+                }
+
+                p:last-of-type {
+                    position: absolute;
+                    display: block;
+                    top: 60px;
+                    left: 10px;
+                    width: 390px;
+                    height: 70px;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    color: #000;
+                }
+            }
+
+            div.kaicho {
+                position: relative;
+                top: 25px;
+                width: 125px;
+                height: 350px;
+                margin: 0 auto;
+                background: url(../images/people_kaicho.png) center 130px no-repeat;
+                background-size: 55%;
+                border: .25px solid rgba(#000000, .1);
+                text-align: center;
+
+                p:first-of-type {
+                    position: absolute;
+                    display: block;
+                    top: -25px;
+                    left: 15px;
+                    width: 100px;
+                    height: 50px;
+                    background-color: #3a3a3a;
+                    font-size: 1.5rem;
+                    line-height: 3.2rem;
+                    color: rgba(#fff, .9);
+                }
+
+                p:last-of-type {
+                    position: absolute;
+                    display: block;
+                    top: 60px;
+                    left: 15px;
+                    width: 100px;
+                    height: 50px;
+                    font-size: 1.1rem;
+                    line-height: 1.5rem;
+                    color: #000;
+                }
+            }
+
+            div.div_yajirusi02 {
+                position: relative;
+                top: 180px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 45px;
+                height: 25px;
+
+                img.yajirusi02 {
+                    width: 40px;
+                    z-index: 1;
+                }
+            }
+
+            div.fuku {
+                position: relative;
+                top: 25px;
+                width: 125px;
+                height: 350px;
+                margin: 0 auto;
+                background: url(../images/people_fuku.png) center 140px no-repeat;
+                background-size: 80%;
+                border: .25px solid rgba(#000000, .1);
+                text-align: center;
+
+                p:first-of-type {
+                    position: absolute;
+                    display: block;
+                    top: -25px;
+                    left: 15px;
+                    width: 100px;
+                    height: 50px;
+                    background-color: #3a3a3a;
+                    font-size: .9rem;
+                    line-height: 1.2rem;
+                    color: rgba(#fff, .9);
+                    padding-top: 5px;
+                }
+
+                p:last-of-type {
+                    position: absolute;
+                    display: block;
+                    top: 60px;
+                    left: 15px;
+                    width: 100px;
+                    height: 50px;
+                    font-size: 1.1rem;
+                    line-height: 1.5rem;
+                    color: #000;
+                }
+            }
+        }
+
+        div.div_yajirusi03 {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto 0 auto;
+            width: 750px;
+            height: 100px;
+
+            img.yajirusi03 {
+                width: 95%;
+                z-index: 1;
+            }
+        }
+
+        div.sangyoume {
+            width: 750px;
+            height: 750px;
+            margin: -20px auto;
+            border: .25px solid rgba(#000000, .1);
+            background: url(../images/people_gr.jpg) center 110px no-repeat;
+
+            div.sosiki_gr {
+                position: relative;
+                width: 750px;
+                height: 160px;
+                margin: 0 auto;
+                background-size: 45%;
+                border: .25px solid rgba(#000000, .1);
+                text-align: center;
+                div.gr01 {
+                    position: absolute;
+                    display: block;
+                    top: 35px;
+                    left: 20px;
+                    width: 200px;
+                    height: 50px;
+                    background-color: #3a3a3a;
+                        text-align: left;
+
+                    h3 {
+                        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+                        font-size: 1.1rem;
+                        line-height: 3rem;
+                        font-weight: normal;
+                        color: #fff;
+                        text-align: center;
+                    }
+                    ul {
+                        position: absolute;
+                        display: block;
+                        top: 50px;
+                        width: 200px;
+                        height: 240px;
+                        background-color: rgba(#ebebeb,.75);
+                        border: .25px solid rgba(#000000, .1);
+                        padding: 20px;
+                        li {
+                            font-size: 1rem;
+                            color: #000;
+                            list-style: disc;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+                div.gr02 {
+                    position: absolute;
+                    display: block;
+                    top: 35px;
+                    left: 240px;
+                    width: 125px;
+                    height: 50px;
+                    background-color: #3a3a3a;
+                        text-align: left;
+
+                    h3 {
+                        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+                        font-size: 1.1rem;
+                        line-height: 3rem;
+                        font-weight: normal;
+                        color: #fff;
+                        text-align: center;
+                    }
+                    ul {
+                        position: absolute;
+                        display: block;
+                        top: 50px;
+                        width: 125px;
+                        height: 240px;
+                        background-color: rgba(#ebebeb,.75);
+                        border: .25px solid rgba(#000000, .1);
+                        padding: 20px;
+                        li {
+                            font-size: 1rem;
+                            color: #000;
+                            list-style: disc;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+                div.gr03 {
+                    position: absolute;
+                    display: block;
+                    top: 35px;
+                    left: 385px;
+                    width: 125px;
+                    height: 50px;
+                    background-color: #3a3a3a;
+                    text-align: left;
+
+                    h3 {
+                        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+                        font-size: 1.1rem;
+                        line-height: 3rem;
+                        font-weight: normal;
+                        color: #fff;
+                        text-align: center;
+                    }
+                    ul {
+                        position: absolute;
+                        display: block;
+                        top: 50px;
+                        width: 125px;
+                        height: 240px;
+                        background-color: rgba(#ebebeb,.75);
+                        border: .25px solid rgba(#000000, .1);
+                        padding: 20px;
+                        li {
+                            font-size: 1rem;
+                            color: #000;
+                            list-style: disc;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+                div.gr04{
+                    position: absolute;
+                    display: block;
+                    top: 35px;
+                    left: 530px;
+                    width: 200px;
+                    height: 50px;
+                    background-color: #3a3a3a;
+                        text-align: left;
+
+                    h3 {
+                        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+                        font-size: 1.1rem;
+                        line-height: 3rem;
+                        font-weight: normal;
+                        color: #fff;
+                        text-align: center;
+                    }
+                    ul {
+                        position: absolute;
+                        display: block;
+                        top: 50px;
+                        width: 200px;
+                        height: 240px;
+                        background-color: rgba(#ebebeb,.75);
+                        border: .25px solid rgba(#000000, .1);
+                        padding: 20px;
+                        li {
+                            font-size: 1rem;
+                            color: #000;
+                            list-style: disc;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+  position: absolute;
+  top: 9600px;
+   width: 100vw;
+   height: 60px;
+   background-color: #009245;
+   z-index: 50;
+   text-align: center;
+   font-size: 1.5rem;
+   line-height: 4rem;
+   letter-spacing: .2rem;
+   color: #fff;
+}
